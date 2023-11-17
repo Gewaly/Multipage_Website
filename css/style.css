@@ -1,0 +1,426 @@
+:root {
+  --main-color: #284990;
+  --black-color: #252525;
+  --dark-color: #19283f;
+  --border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+  outline: none;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--main-color);
+}
+.heading {
+  max-width: 90%;
+  border-bottom: 2px solid #fff;
+}
+.heading span,
+.heading h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+}
+.heading h2 span {
+  color: var(--black-color);
+}
+@media screen and (max-width: 768px) {
+  .heading span,
+  .heading h2 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .heading {
+    max-width: 85%;
+  }
+}
+svg {
+  cursor: pointer;
+}
+::-webkit-scrollbar {
+  height: 2px;
+  width: 15px;
+  background-color: rgb(7, 126, 182);
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  background-color: greenyellow;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(211, 255, 144);
+}
+
+/* ============================= Start Nav ==========================*/
+.navbar {
+  margin-top: 40px;
+  position: sticky;
+  display: block;
+  padding-top: 0 !important;
+  top: 0;
+  z-index: 1000;
+}
+.navbar .container .logo {
+  width: 90px;
+}
+.navbar .container {
+  background-color: #fff;
+  width: 85%;
+  box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+  overflow: hidden;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.navbar .container .collapse {
+  flex-grow: 0;
+}
+.navbar .navbar-nav .nav-link {
+  color: #000;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 6px !important;
+  margin-right: 5px;
+}
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+  border-color: var(--main-color);
+}
+.navbar .search .buttons {
+  position: relative;
+}
+.navbar .search button {
+  background-color: transparent;
+}
+.navbar .carts button {
+  background-color: transparent;
+}
+.dis-search {
+  position: absolute;
+  top: 7rem;
+  box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+
+  display: none;
+  right: 15rem;
+}
+
+.dis-carts {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+  top: 7rem;
+  display: none;
+  right: 7rem;
+}
+.dis-carts .cart-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dis-carts .cart-items:hover {
+  box-shadow: 0px 0px 25px 2px rgb(0 0 0 / 75%);
+}
+.dis-carts .cart-items img {
+  width: 100px;
+}
+.dis-carts .check {
+  background-color: #101010;
+}
+
+.dis-carts .check button {
+  color: #fff;
+  width: 100%;
+}
+
+.navbar .navbar-toggler {
+  font-size: 25px;
+  border-color: #fff;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+/* ============================= End Nav ==========================*/
+
+/*========================== Start Home ==================*/
+.home {
+  background: url(../images/pizza-with-turkey-bacon-orange-and-cashew-nuts-2022-03-29-07-33-54-utc.jpg);
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: -149px;
+}
+.home .content {
+  color: #fff;
+  max-width: 60rem;
+}
+.home .content h3 {
+  font-size: 70px;
+  font-weight: 900;
+}
+.home .content p {
+  font-size: 20px;
+}
+.btn {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 1rem 3.75rem;
+  border-radius: 30px;
+  font-size: 25px;
+  color: #fff;
+  background-color: var(--black-color);
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #535353;
+  color: #fff;
+}
+@media screen and (max-width: 768px) {
+  .home .content h3 {
+    font-size: 50px;
+  }
+}
+/*========================== End Home ==================*/
+
+/* ===================== Start Menu ========================= */
+.menu .box {
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+s {
+  text-decoration: line-through;
+  font-size: 15px;
+}
+/* ===================== End Menu ========================= */
+
+/* ===================== Start Products ========================= */
+.products .box {
+  border-radius: 25px;
+}
+.products .text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.products .text a:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* ===================== End Products ========================= */
+
+/* ===================== Start About ========================= */
+.about .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .about .content {
+    display: block;
+  }
+  .about .content .text {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 426px) {
+  .about .content img {
+    width: 350px;
+  }
+  .about .content .text {
+    width: 150px;
+  }
+}
+/* ===================== End About ========================= */
+
+/* ===================== Start REVIEW ========================= */
+.review .person {
+  width: 60px;
+}
+.review .box {
+  border-radius: 25px;
+}
+.review .box .stars {
+  color: #ffd700;
+}
+/* ===================== End REVIEW ========================= */
+
+/* ===================== Start Contact ========================= */
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.contact .row .map {
+  flex: 1 1 45px;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45px;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact .row form h3 {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #fff;
+}
+
+.contact .row form .inputBox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  border: var(--border);
+}
+
+.contact .row form .inputBox svg {
+  color: #fff;
+  font-size: 20px;
+  padding-left: 2rem;
+}
+
+.contact .row form .inputBox input {
+  width: 100%;
+  padding: 20px;
+  font-size: 17px;
+  color: #fff;
+  text-transform: none;
+  background-color: transparent;
+}
+
+.contact .row form .btn {
+  color: var(--main-color);
+  background-color: #fff;
+  font-weight: bold;
+}
+.contact .row .btn:hover {
+  background-color: #d4cece;
+}
+@media screen and (max-width: 400px) {
+  .contact .row form h3 {
+    font-size: 25px;
+  }
+  .contact .row .btn {
+    font-size: 20px;
+  }
+}
+/* ===================== End Contact ========================= */
+
+/* ===================== Start Blog ========================= */
+.blog .box {
+  border-radius: 25px;
+  overflow: hidden;
+}
+.blog .box img {
+  width: 100%;
+}
+
+.blog .box .admin {
+  font-size: 11px;
+}
+/* ===================== End Blog ========================= */
+
+/* ===================== Start Footer ========================= */
+.footer {
+  background-color: var(--black-color);
+}
+.footer .search input {
+  border-radius: 35px;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+.footer .search button {
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 35px;
+}
+.footer .search button:hover {
+  background-color: #486196;
+}
+.footer .titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.footer .titles a {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 10px;
+  text-decoration: none;
+  border: 1px solid #fff;
+}
+.footer .titles a:hover {
+  background-color: transparent;
+}
+.footer h4 {
+  color: #fff;
+  font-size: 20px;
+}
+.footer h4 span {
+  color: var(--main-color);
+}
+.footer .icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+  color: #fff;
+  font-size: 30px;
+}
+.footer .icons svg {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.footer .icons svg:hover {
+  background-color: var(--main-color);
+}
+/* ===================== End Footer ========================= */
